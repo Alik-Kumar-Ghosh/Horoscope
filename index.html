@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="horoscope.png" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--jquery-->
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+  rel = "stylesheet">
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Horoscope</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Javascript -->
+</head>
+<body>
+  <header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      <video controls muted src="https://akgware.000webhostapp.com/zodiac_evolution_3d.mp4" autoplay="" loop=""></video>
+    </div>
+    <div class="header-overlay"></div>
+      <div class="header-content text-md-center">
+        <h1 class="ml14">
+         <span class="text-wrapper">
+            <img id="imagehoro" src="horoscope.png"><br>
+         <b><span class="letters">HOROSCOPE</span></b>
+         <span class="line"></span>
+         </span>
+        </h1>
+      <p class="ml16">A forecast of a person's future, typically including a delineation of character and circumstances, based on the relative positions of the stars and planets at the time of that person's birth.</p>
+        <a class="btn" href="#section01">Find Out More</a>
+        </div>
+        </header>
+        <div id="section01">
+        <section class="section section-a" id="grad1">
+        <div class="container">
+        <h2>Yours Todays Horoscope</h2>
+        <label class="label1">select your sign : </label>
+        <div class="form-group">
+        <select id="list" class="form-control" >
+        <option value="none">sign *</option>
+        <option value="aries">Aries</option>
+        <option value="taurus">Taurus</option>
+        <option value="gemini">Gemini</option>
+        <option value="cancer">Cancer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="scorpio">Scorpio</option>
+        <option value="sagittarius">Sagittarius</option>
+        <option value="capricorn">Capricorn</option>
+        <option value="aquarius">Aquarius</option>
+        <option value="pisces">Pisces</option>
+        </select>
+      </div>
+      <b><button class="btn" onclick="getSelectValue()" >Fortune</button></b>
+      <br>
+      <br>
+      <div class="alert alert-success" id="styleindeed0" role="alert">
+      <h3 id="givesignvalue"></h3>
+      <h5 id="givedes"></h5>
+      <h5 id="givecolor"></h5>
+      <h5 id="giveno"></h5>
+      <h5 id="givetime"></h5>
+      <h5 id="givemood"></h5>
+      </div>
+      </div>
+      </div>
+      </section>
+      </div>
+      <section class="section section-b" id="grad2">
+      <div class="container">
+      <h2>Don't know your sign</h2>
+      <h6>We may help you to find your astrologocial sign</h6>
+      <form>
+      <div class="form-group">
+      <label for="formGroupExampleInput">Full name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="full name">
+      </div>
+      </form>
+      <p>BirthDate:<input type = "text" id = "datepicker-13" placeholder="mm/dd/yyyy";></p>
+      <button class="btn" onclick="myfun(),getname()">Find</button>
+      <br><br>
+      <h4 id="changename"></h4>
+      <br>
+      <div class="alert alert-success" id="styleindeed" role="alert">
+      <u><h5 id="givesign"></h5></u>
+      </div>
+      </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+      <p>website created by akg productions   |   Source of Horoscope : Kudosmedia </p>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script src="script.js"></script>    
+</body>
+</html>
+
+
